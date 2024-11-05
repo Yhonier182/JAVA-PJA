@@ -14,12 +14,16 @@ public class Mascota implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)//el id de la mascota es autoincrementabl
     @Column(name = "id_mascota")//indicamos el nombre de campo al que la variable hace reference
     private Long idMascota;
+
     @Column(nullable = false, length = 45)//el nombre no puede ser null en BD, así como el tamaño
     private String nombre;
+
     @Column(length = 45)//solo indicamos el tamaño, ya que corresponde la variable al nombre del
     private String raza;
+
     @Column(name = "color", length = 45)//indicamos el nombre de campo al que la variable hacer
     private String colorMascota;
+
     @Column(length = 45)
     private String sexo;
 
